@@ -1,0 +1,22 @@
+<div class="loading" ng-show="loading">
+  <img src="images/loading.svg">
+</div>
+<!-- details -->
+<div class="details" ng-show="!loading">
+    <img ng-src="{{movies[movieId].image}}" >
+    <h3>{{ movies[movieId].title }}</h3>
+    <h4>Rating: {{ movies[movieId].rating }}</h4>
+    <h4>Release Year: {{ movies[movieId].releaseYear }}</h4>
+    <h4>Genre: <span ng-repeat="genre in movies[movieId].genre">{{ genre }}{{$last ? '' : ', '}}</span> </h4>
+    <p>{{ movies[movieId].summary }}</p>
+<!-- navigation -->
+<nav>
+  <ul>
+    <li><a href="#/detail/{{ prevMovie }}"><i class="fa fa-angle-left ic-left" aria-hidden="true"></i></a></li>
+    <li><a href="index.html"><i class="fa fa-home ic-home" aria-hidden="true"></i></a></li>
+    <li><a href="#/detail/{{ nextMovie }}"><i class="fa fa-angle-right ic-right" aria-hidden="true"></i></a></li>
+  </ul>
+</nav>
+<!-- /navigation -->
+</div>
+<!-- /details -->

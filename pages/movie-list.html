@@ -1,0 +1,31 @@
+
+<!-- loading -->
+<div class="loading" ng-show="loading">
+  <img src="images/loading.svg">
+</div>
+<!-- /loading -->
+<div class="warp" ng-show="!loading">
+<!-- search field -->
+<i class="fa fa-search search-ico" aria-hidden="true"></i><input type="text" name="search" id="search" placeholder="Search Movie..." autocomplete="off"  ng-model="search">
+<!-- /search field -->
+<!-- content -->
+<div class="content">
+<!-- items -->
+<ul>
+  <li ng-repeat="movie in movies | filter: search">
+  <a href="#/detail/{{ movies.indexOf(movie) }}">
+  <div class="item">
+    <img ng-src="{{movie.image}}">
+    <h3>{{movie.title}} <span>- {{movie.releaseYear}}</span></h3>
+    <h4>Rating: {{movie.rating}}</h4>
+    <h4>Genre: <span ng-repeat="genre in movie.genre">{{ genre }}{{$last ? '' : ', '}}</span> </h4>
+    </div>
+    </a>
+  </li>
+</ul>
+<!-- /items -->
+</div>
+<!-- /content -->
+</div>
+
+
