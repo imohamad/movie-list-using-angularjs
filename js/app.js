@@ -1,7 +1,4 @@
-var movieList = angular.module('movieList', [
-  'ngRoute',
-  'moviesController'
-]);
+var movieList = angular.module('movieList', ['ngRoute','moviesController']);
 
 var moviesController = angular.module('moviesController', []);
 

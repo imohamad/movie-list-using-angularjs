@@ -18,7 +18,7 @@
 <!-- items -->
 <ul>
   <li ng-repeat="movie in movies | filter: search">
-  <a href="#/detail/{{ movies.indexOf(movie) }}">
+  <a ng-href="#/detail/{{ movies.indexOf(movie) }}">
   <div class="item">
     <img ng-src="{{movie.image}}">
     <h3>{{movie.title}} <span>- {{movie.releaseYear}}</span></h3>
