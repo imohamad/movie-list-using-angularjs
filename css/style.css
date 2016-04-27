@@ -83,6 +83,7 @@ filter: progid:DXImageTransform.Microsoft.Shadow(Strength=7, Direction=90, Color
 
 padding-left: 40px;
 padding-right: 10px;
+outline: none;
 }
 .search-ico{
   color: #bcbaba;
@@ -256,10 +257,13 @@ border-radius: 3px;
 .ic-left:hover, .ic-right:hover, .ic-home:hover{
   background-color: #52c9d0;
 }
-.loading{
+.loading, .error{
   text-align: center;
 }
 .loading img{
   width: 82px;
   height: 82px;
+}
+.error{
+  color: #fff;
 }

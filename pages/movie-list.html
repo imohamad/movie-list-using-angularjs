@@ -4,6 +4,11 @@
   <img src="images/loading.svg">
 </div>
 <!-- /loading -->
+<!-- error -->
+<div class="error" ng-show="error">
+  Sorry...Error To Load Data!!!
+</div>
+<!-- /error -->
 <div class="warp" ng-show="!loading">
 <!-- search field -->
 <i class="fa fa-search search-ico" aria-hidden="true"></i><input type="text" name="search" id="search" placeholder="Search Movie..." autocomplete="off"  ng-model="search">

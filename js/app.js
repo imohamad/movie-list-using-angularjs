@@ -31,7 +31,9 @@ moviesController.controller('ListMovie', ['$scope', '$http', function ($scope, $
   $scope.movies = data; // insert json data to movies
   $scope.loading = false; // for hide loading
 
-  }); 
+  }).error(function(){
+        $scope.error = true; //for show error
+    }); 
 
 }]);
 
@@ -40,6 +42,7 @@ moviesController.controller('DetailMovie', [
   '$scope', '$http', '$routeParams', function ($scope, $http, $routeParams){
 
   $scope.loading = true; //for show loading
+  $scope.error = false; //for error
   $http.get('https://dl.dropboxusercontent.com/s/eunjr4op0aj3kia/movies.json').success(function(data){
 
   $scope.movies = data; // insert json data to movies
@@ -61,7 +64,9 @@ moviesController.controller('DetailMovie', [
 
   $scope.loading = false; //for hide loading
 
-  });
+  }).error(function(){
+        $scope.error = true; //for show error
+    });
   
 }]);
 

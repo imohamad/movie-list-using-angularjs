@@ -1,6 +1,13 @@
+<!-- loading -->
 <div class="loading" ng-show="loading">
   <img src="images/loading.svg">
 </div>
+<!-- /loading -->
+<!-- error -->
+<div class="error" ng-show="error">
+  Sorry...Error To Load Data!!!
+</div>
+<!-- /error -->
 <!-- details -->
 <div class="details" ng-show="!loading">
     <img ng-src="{{movies[movieId].image}}" >
@@ -19,4 +26,4 @@
 </nav>
 <!-- /navigation -->
 </div>
-<!-- /details -->
+<!-- /details
